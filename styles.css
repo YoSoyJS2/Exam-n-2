@@ -1,0 +1,369 @@
+/* Estilo general del cuerpo */
+body {
+  margin: 0; /* Elimina el margen predeterminado */
+  font-family: Arial, sans-serif; /* Define la fuente */
+  background-color: #d8b4a0; /* Color de fondo */
+}
+
+/* Estilo del encabezado */
+header {
+  display: flex; /* Usa flexbox para alinear elementos */
+  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: space-between; /* Espacia los elementos horizontalmente */
+  padding: 10px 20px; /* Espaciado interno */
+  background-color: #a67c68; /* Color de fondo */
+  color: white; /* Color del texto */
+}
+
+/* Estilo del ícono del menú */
+.menu-icon {
+  font-size: 24px; /* Tamaño de la fuente */
+  cursor: pointer; /* Cambia el cursor a "puntero" */
+}
+
+/* Estilo del título principal */
+h1 {
+  font-size: 18px; /* Tamaño de la fuente */
+  margin: 0; /* Elimina el margen */
+}
+
+/* Estilo del contenido principal */
+main {
+  padding: 20px; /* Espaciado interno */
+}
+
+/* Estilo de la cuadrícula de películas */
+.movie-grid {
+  display: grid; /* Usa grid layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(150px, 1fr)
+  ); /* Columnas adaptables */
+  gap: 10px; /* Espaciado entre elementos */
+}
+
+/* Estilo de las imágenes de las películas */
+.casas-item img {
+  width: 100%; /* Ancho completo */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 600px) {
+  body {
+    background-color: lightblue; /* Cambia el color de fondo */
+  }
+}
+
+/* Estilo para pantallas medianas */
+@media (max-width: 800px) {
+  body {
+    background-color: #a67c68; /* Cambia el color de fondo */
+  }
+}
+
+/* Estilo del menú de navegación */
+nav {
+  position: absolute; /* Posición absoluta */
+  top: 50px; /* Distancia desde la parte superior */
+  left: 20px; /* Distancia desde la izquierda */
+  background-color: #f5f4f3; /* Color de fondo */
+  border: 1px solid #a67c68; /* Borde */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Estilo de la lista de navegación */
+nav ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  margin: 0; /* Elimina el margen */
+  padding: 10px; /* Espaciado interno */
+}
+
+/* Estilo de los elementos de la lista */
+nav ul li {
+  margin: 5px 10px; /* Espaciado interno */
+  cursor: pointer; /* Cambia el cursor a "puntero" */
+}
+
+/* Estilo al pasar el cursor sobre los elementos de la lista */
+nav ul li:hover {
+  background-color: #f0e6e2; /* Cambia el color de fondo */
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+  display: none; /* Oculta el elemento */
+}
+
+/* Estilo de la sección de información de contacto */
+.contact-info {
+  margin: 20px; /* Espaciado externo */
+  font-size: 16px; /* Tamaño de la fuente */
+}
+
+/* Estilo del mapa */
+.mapa iframe {
+  width: 100%; /* Ancho completo */
+  height: 300px; /* Altura fija */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo del formulario de contacto */
+.contact-form {
+  margin: 20px; /* Espaciado externo */
+}
+
+/* Estilo del formulario */
+.contact-form form {
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Coloca los elementos en columna */
+  gap: 10px; /* Espaciado entre elementos */
+}
+
+/* Estilo de las etiquetas del formulario */
+.contact-form label {
+  font-size: 14px; /* Tamaño de la fuente */
+  margin-bottom: 5px; /* Espaciado inferior */
+}
+
+/* Estilo de los campos de entrada, selección y botón */
+.contact-form input,
+.contact-form select,
+.contact-form button {
+  padding: 10px; /* Espaciado interno */
+  font-size: 14px; /* Tamaño de la fuente */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo del botón de envío */
+.contact-form button {
+  background-color: #ff007f; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor a "puntero" */
+}
+
+/* Estilo al pasar el cursor sobre el botón */
+.contact-form button:hover {
+  background-color: #e60073; /* Cambia el color de fondo */
+}
+
+/* Estilo de pelicula*/
+.casas-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.casas-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.casas-item img {
+  width: 100%; /* Ancho completo */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0; /* Bordes redondeados solo arriba */
+  transition: filter 0.3s ease;
+}
+
+.casas-item:hover img {
+  filter: brightness(1.1);
+}
+
+.casas-info {
+  padding: 15px;
+}
+
+.casas-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.casas-info p {
+  margin: 0 0 10px 0;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.casas-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 11px;
+}
+
+.casas-details .year {
+  background-color: #a67c68;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.casas-details .genre {
+  background-color: #d8b4a0;
+  color: #333;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.casas-details .rating {
+  color: #ff6b35;
+  font-weight: bold;
+}
+
+/* Estilo del modal */
+/* Estilos para el modal */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 2% auto;
+  padding: 0;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 15px 20px 0 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.modal-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-image img {
+  max-width: 300px;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-details h2 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.modal-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.modal-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.modal-cast {
+  margin-bottom: 20px;
+}
+
+.modal-cast div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.cast-member {
+  background-color: #a67c68;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 13px;
+}
+
+.modal-synopsis {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #a67c68;
+}
+
+.modal-synopsis p {
+  line-height: 1.6;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* Responsivo para el modal */
+@media (min-width: 768px) {
+  .modal-body {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .modal-image {
+    flex: 0 0 300px;
+    margin-bottom: 0;
+  }
+
+  .modal-details {
+    flex: 1;
+  }
+
+  .modal-details h2 {
+    text-align: left;
+  }
+}

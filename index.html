@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal Inmovilario</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div id="menu-icon" class="menu-icon">☰</div>
+      <h1>Venta Inmovilaria</h1>
+      <nav id="menu" class="hidden">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Movies</a></li>
+          <li><a href="contacto.html">Contact</a></li>
+          <li><a href="calculadora.html">Calculadora</a></li>
+          <li><a href="game.html">Game</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <button id="btn_click">Click me</button>
+      <div class="casas-grid"></div>
+    </main>
+    <!-- Modal para detalle de películas -->
+    <div id="casasModal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-body">
+          <div class="modal-image">
+            <img id="modalImage" src=" " alt=" " />
+          </div>
+          <div class="modal-details">
+            <h2 id="modalTitle"></h2>
+            <div class="modal-info">
+              <p><strong>Ciudad:</strong> <span id="modalCiudad"></span></p>
+              <p><strong>Nombre:</strong> <span id="modalNombre"></span></p>
+              <p>
+                <strong>Categoria:</strong> <span id="modalCategoria"></span>
+              </p>
+              <p>
+                <strong>Precio actual:</strong>
+                <span id="modalPrecioactual"></span>
+              </p>
+              <p>
+                <strong>Precio anterior:</strong>
+                <span id="modalPrecioanterior"></span> ⭐
+              </p>
+              <p><strong>Area:</strong> <span id="modalArea"></span></p>
+              <p>
+                <strong>Habitaciones:</strong>
+                <span id="modalHabitaciones"></span>
+              </p>
+              <p><strong>Baños:</strong> <span id="modalBaños"></span></p>
+              <p>
+                <strong>Parqueros:</strong> <span id="modalParqueros"></span>
+              </p>
+              <p><strong>Latitud:</strong> <span id="modalLatitud"></span></p>
+              <p><strong>Longitud:</strong> <span id="modalLongitud"></span></p>
+            </div>
+            <div class="modal-cast">
+              <strong>Reparto:</strong>
+              <div id="modalCast"></div>
+            </div>
+            <div class="modal-synopsis">
+              <strong>Sinopsis:</strong>
+              <p id="modalSynopsis"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="casas.js"></script>
+  </body>
+</html>
